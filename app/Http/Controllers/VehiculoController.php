@@ -16,6 +16,11 @@ class VehiculoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+ {
+ $this->middleware('auth');
+ }
     public function index(Request $request)
  {
  if ($request)
@@ -33,9 +38,10 @@ class VehiculoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         return view('Vehiculo.create');
+        $request->user()->authorizeRoles('admin');
     }
 
     /**
