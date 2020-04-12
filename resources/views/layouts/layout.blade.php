@@ -208,15 +208,19 @@ desired effect
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
+                  <div class="pull-left">
+                    <a href="{{ route('home') }}" class="btn btn-default btn-flat" >Volver a home</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="{{ route('logout') }}" class="btn btn-default btn-flat" onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+                      Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                    </form>
+                  </div>
+                </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>

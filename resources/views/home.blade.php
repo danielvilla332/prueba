@@ -15,6 +15,13 @@
                     @endif
 
                     You are logged in!
+                    <br>
+                    <a href="{{ route('vehiculo.index') }}" class="btn btn-info btnblock" >Vehículo</a>
+                    @auth
+                    <a href="{{ route('register') }}" class="btn btn-info btnblock">Register</a>
+                    @endauth
+                    
+                    </br>
                 </div>
             </div>
         </div>
