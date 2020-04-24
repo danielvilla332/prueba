@@ -50,7 +50,7 @@ class VehiculoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(VehiculoFormRequest $request)
     {
         $vehiculo=new Vehiculo;
  $vehiculo->placa=$request->get('placa');

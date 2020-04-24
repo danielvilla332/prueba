@@ -17,6 +17,12 @@ Route::get('/', function () {
 });
 */
 
+Route::get('/', function () {
+    return view('auth/login');
+    });
+    
+Route::resource('tarifa','TarifaController');
+
 Route::resource('vehiculo', 'VehiculoController');
 
 

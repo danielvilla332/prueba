@@ -66,7 +66,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
-                                <a href="{{ route('home') }}" class="btn btn-info btnblock" >Atrás</a>
+                                <a href="{{ route('vehiculo.index') }}" class="btn btn-info btnblock" >Atrás</a>
                             </div>
                         </div>
                     </form>
