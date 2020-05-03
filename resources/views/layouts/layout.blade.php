@@ -266,6 +266,7 @@ desired effect
         <li class="active"><a href="{{ route('tarifa.index') }}"><i class="fa fa-link"></i> <span>Tarifa</span></a></li>
         <li><a href="{{ route('vehiculo.index') }}"><i class="fa fa-link"></i> <span>Vehículo</span></a></li>
         <li><a href="{{ route('register') }}"><i class="fa fa-link"></i> <span>Registrar Usuario</span></a></li>
+        <li><a href="{{ route('ingresoV.index') }}"><i class="fa fa-link"></i> <span>Ingreso_vehiculos</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">

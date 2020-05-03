@@ -29,5 +29,9 @@ Route::resource('vehiculo', 'VehiculoController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('ingresoV','Ingreso_vehiculoController');
+
+Route::resource('ticket', 'TicketController');
+
 
 
