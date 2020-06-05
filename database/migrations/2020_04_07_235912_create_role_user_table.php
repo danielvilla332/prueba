@@ -12,16 +12,16 @@ class CreateRoleUserTable extends Migration
      * @return void
      */
     public function up()
-{
- Schema::create('role_user', function (Blueprint $table) {
- $table->bigincrements('id');
- $table->integer('role_id')->unsigned();
- $table->integer('user_id')->unsigned();
- $table->timestamps();
- });
-}
-public function down()
-{
- Schema::dropIfExists('role_user');
-}
+    {
+        Schema::create('role_user', function (Blueprint $table) {
+            $table->bigincrements('id');
+            $table->integer('role_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->timestamps();
+        });
+    }
+    public function down()
+    {
+        Schema::dropIfExists('role_user');
+    }
 }

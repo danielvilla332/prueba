@@ -15,6 +15,8 @@ class CreateTipoVehiculosTable extends Migration
     {
         Schema::create('tipo_vehiculos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->UnsignedInteger('vehiculo_id');
+            $table->foreign('vehiculo_id')->references('id')->on('vehiculos')->onDelete('cascade');
             $table->string('nombre', 25);
             $table->string('descripcion',25) ->nullable();
         });

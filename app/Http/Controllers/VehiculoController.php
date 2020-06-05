@@ -53,7 +53,7 @@ class VehiculoController extends Controller
     public function store(VehiculoFormRequest $request)
     {
         $vehiculo=new Vehiculo;
- $vehiculo->placa=$request->get('placa');
+ $vehiculo->placa=bcrypt($request->get('placa'));
  $vehiculo->tipo=$request->get('tipo');
  $vehiculo->modelo=$request->get('modelo');
  $vehiculo->save();
